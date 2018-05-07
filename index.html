@@ -6,6 +6,7 @@
 
     <!-- Insert this script -->
     <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.1.0.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
     <style>
       .selector {
         width: 30px;
@@ -99,8 +100,12 @@
         color: white;
         margin-bottom: 3px;
       }
-
-
+      .inner-circle svg {
+        fill: black;
+        color: black;
+        margin-top: 2px;
+        padding: 1px;
+      }
     </style>
 </head>
 
@@ -147,15 +152,13 @@
         <div class="toggle-container">
           <p>single</p>
           <a href=""><div class="selector style single">
-            <div class="inner-circle"></div>
+            <div class="inner-circle"><i class="fas fa-angle-left"></i></div>
           </div></a>
         </div>
         <div class="toggle-container">
           <p>double</p>
           <a href=""><div class="selector style double">
-            <div class="inner-circle">
-              <div class="inner-circle-half"></div>
-            </div>
+            <div class="inner-circle"><i class="fas fa-angle-left"></i><i class="fas fa-angle-right"></i></div>
           </div></a>
         </div>
       </div><!-- .tool-container -->
@@ -194,10 +197,10 @@
 
     var urlid = '';
     if(lighting == 'light') {
-      urlid = style == 'single' ? '33049801467f4290890740f59cae492a' : '9357fd89b14c4a0aa295662c3bbd6d20';
+      urlid = style == 'single' ? '33049801467f4290890740f59cae492a' : 'fca8c0b946ba46d3ac4d40e876760385';
     }
     else {
-      urlid = style == 'single' ? 'f017760ab0904d9fbc582811f35044e4' : '3b8f5cb6999b4b8e94e5b973cf42b46b';
+      urlid = style == 'single' ? 'f017760ab0904d9fbc582811f35044e4' : 'f9c39c061641467a9b52773c272ce021';
     }
     jQuery('document').ready(function($) {
       if(lighting == 'dark') {
@@ -236,9 +239,9 @@
           blackId = 546;
         }
         else {
-          redId = 539;
-          greenId = 545;
-          blackId = 546;
+          redId = 543;
+          greenId = 544;
+          blackId = 545;
         }
       }
       else {
@@ -248,9 +251,9 @@
           blackId = 546;
         }
         else {
-          redId = 539;
-          greenId = 545;
-          blackId = 546;
+          redId = 543;
+          greenId = 544;
+          blackId = 545;
         }
       }
 
